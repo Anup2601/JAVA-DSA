@@ -1,3 +1,5 @@
+// Brute force
+
 import java.util.Scanner;
 
 class max_subarr {
