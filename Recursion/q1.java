@@ -1,3 +1,4 @@
+// to find negative natural number from 10 to1
 class q1{
     public  static void printDec(int num){
         if(num==1){

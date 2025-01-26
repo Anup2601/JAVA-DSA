@@ -1,3 +1,4 @@
+// to find the foctorial
 class fact{
     public static int factorial(int n){
         if (n==1){
