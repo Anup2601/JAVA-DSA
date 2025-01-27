@@ -1,3 +1,4 @@
+// to find last occurance
 public class p8 {
     public static int LO(int[] arr,int i,int key){
         if(i==0){
