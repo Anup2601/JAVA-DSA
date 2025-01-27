@@ -1,3 +1,4 @@
+// to find the first occurance
 public class p7 {
     public static int FO(int[] arr,int i,int key ){
         if(arr[i]==arr.length-1){
