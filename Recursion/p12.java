@@ -1,10 +1,12 @@
 // to remove duplicates in string
 class p12{
     public static void removeDuplicates(String s,int i,StringBuilder sb,boolean[] map){
+        // base condition
         if(i==s.length()){
             System.out.println(sb);
             return;
         }
+        // kaam
         char currchar=s.charAt(i);
         if(map[currchar-'a']==true){
             removeDuplicates(s, i+1, sb, map);
