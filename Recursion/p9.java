@@ -1,3 +1,4 @@
+// to calculate the power
 class p9{
     public static int pow(int x,int n){
         if(n==1){
