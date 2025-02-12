@@ -6,5 +6,6 @@ public class Q1 {
         int x=sc.nextInt();
         int ans=x^x;
         System.out.println(ans);
+        sc.close();
     }
 }
