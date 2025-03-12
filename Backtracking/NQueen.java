@@ -1,20 +1,22 @@
 class NQueen {
-    public static void sol(char board[][],int row){
+    public static boolean  sol(char board[][],int row){
         // base condition 
         if(row==board.length){
+            count++;
             printBoad(board);
-            return;
+            return true;
         }
         // colmmn loop  
         for (int j = 0; j <board.length ; j++) {
             if(isSafe(board,row,j)){
                 board[row][j]='Q';
-                sol(board, row+1);
+                if(sol(board, row+1)){
+                    return true;
+                }
                 board[row][j]='X';
             }
-            
         }
-
+        return false;
     }
 
     public static boolean isSafe(char[][] board, int row, int col){
@@ -48,14 +50,21 @@ class NQueen {
             System.out.println();
         }
     }
+    static int count=0;
     public static void main(String[] args) {
-        int n=4;
+        int n=5;
         char board [][]=new char[n][n];
         for (int i = 0; i < n ;i++) {
             for (int j = 0; j < n; j++) {
                 board[i][j]='X';
             }
         }
-        sol(board,0);
+        if(sol(board,0)){
+            System.out.println("Solution is possible");
+        }
+        else{
+            System.out.println("solution is not possible");
+        }
+        System.out.println("total ways to solve NQueen problem is :-"+count);
     }
 }
