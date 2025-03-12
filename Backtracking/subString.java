@@ -1,5 +1,3 @@
-
-
 public class subString {
     public static void findsubString(String s, int n,String ans){
          if(n==s.length()){
