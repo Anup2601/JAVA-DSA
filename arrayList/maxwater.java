@@ -12,7 +12,7 @@ class maxwater{
             int maxheight=Math.min(height.get(left), height.get(rigth));
             int area=width*maxheight;
             maxArea=Math.max(area, maxArea);
-            if(left<rigth){
+            if(left<rigth){             
                 left++;
             }
             if(rigth<left){
