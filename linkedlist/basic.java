@@ -101,6 +101,35 @@ class basic{
             temp=temp.next;
         }
     }
+
+    public int search(int key){
+        Node temp=head;
+        for(int i=0;i<size-1;i++){
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+        }
+        return -1;
+    }
+
+    public int help(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=help(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+    }
+
+    public int recursionSearch(int key){
+        return help(head , key);
+    }
     public static void main(String[] args) {
         basic ll=new basic();
         ll.addFirst(1);
@@ -125,5 +154,7 @@ class basic{
         ll.deletelast();
         ll.print();
         System.out.println("size is:-"+ll.size);
+        System.out.println(ll.search(12));
+        System.out.println(ll.recursionSearch(21    ));
     }
 }
