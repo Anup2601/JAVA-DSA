@@ -9,13 +9,6 @@ public class cycle {
     }
     public static Node head;
     public static Node tail;
-    public void print(){
-        Node temp=head;
-        while(temp!=null){
-            System.out.println(temp.data);
-            temp=temp.next;
-        }
-    }
     public static boolean cheak(){
         Node slow=head;
         Node fast=head;
