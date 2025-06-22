@@ -3,9 +3,9 @@ import java.util.Stack;
 
 public class ValidParenthess {
     public static boolean  isValid(String str){
-        Stack<Integer> s=new Stack<>();
+        Stack<Character> s =new Stack<>();
         for(int i=0;i<str.length();i++ ){
-            int ch=str.charAt(i);
+            char ch=str.charAt(i);
             if(ch=='(' || ch=='{' || ch=='['){
                 s.push(ch);
             }else{
