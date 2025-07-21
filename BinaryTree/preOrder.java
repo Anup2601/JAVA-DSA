@@ -1,15 +1,15 @@
-public class preOrder {
+class preOrder{
     static class Node{
         int data;
         Node left;
         Node right;
         public Node(int data){
             this.data=data;
-            this.left= null;
+            this.left=null;
             this.right=null;
         }
     }
-    static class binaryTree{
+    public static class BinaryTree{
         static int idx=-1;
         public static Node BuildTree(int nodes[]){
             idx++;
@@ -24,8 +24,8 @@ public class preOrder {
     }
     public static void main(String[] args) {
         int[] nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-        binaryTree tree= new binaryTree();
-        Node root =tree.BuildTree(nodes);
+        BinaryTree tree =new BinaryTree();
+        Node root=tree.BuildTree(nodes);
         System.out.println(root.data);
-    }    
+    }
 }
